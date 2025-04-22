@@ -377,8 +377,11 @@ if not st.session_state.logged_in:
 
 # Logged-in view
 else:
-    st.write(f'Welcome, {st.session_state.user_id}!')
-    st.write(f'Group: {st.session_state.group_id}')
+    st.markdown(f"""
+        <p style='font-size: 20px; font-weight: bold; color: #ffffff;'>Welcome, {st.session_state.user_id}!</p>
+        <p style='font-size: 18px; font-weight: bold; color: #ffffff;'>Group: {st.session_state.group_id}</p>
+    """, unsafe_allow_html=True)
+
 
     # Add a logout button in the sidebar
     with st.sidebar:
