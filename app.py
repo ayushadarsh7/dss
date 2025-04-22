@@ -416,40 +416,64 @@ else:
             ),
 
             'usual_eating_time': (
-                st.markdown("<span style='font-size: 18px; font-weight: bold;'>When do you typically enjoy eating outside?</span>\n(Select the option that best describes your usual eating time.)", unsafe_allow_html=True),
+st.markdown("""
+    <span style='font-size: 18px; font-weight: bold; color: #ffffff;'>When do you typically enjoy eating outside?</span><br>
+    <span style='color: #ffffff;'>Select the option that best describes your usual eating time.</span>
+""", unsafe_allow_html=True),
                 st.selectbox("", ["Breakfast", "Brunch", "Nightlife"], placeholder="Choose an option")
             ),
 
             'preferred_place': (
-                st.markdown("<span style='font-size: 18px; font-weight: bold;'>What type of place do you usually prefer when eating out?</span>\n(Choose the option that best matches your go-to spot.)", unsafe_allow_html=True),
+st.markdown("""
+    <span style='font-size: 18px; font-weight: bold; color: #ffffff;'>What type of place do you usually prefer when eating out?</span><br>
+    <span style='color: #ffffff;'>Choose the option that best matches your go-to spot.</span>
+""", unsafe_allow_html=True),
+
                 st.multiselect("", ["Restaurants", "Bars", "Cafes", "Diners", "Pubs", "Lounges", "Buffets", 
                 "Street Food Stalls"], placeholder="Choose options")
             ),
 
             'main_course': (
-                st.markdown("<span style='font-size: 18px; font-weight: bold;'>Which of the following food combinations do you most often go for when eating out?</span>\n(Pick the pair that best matches your usual main course preference.)", unsafe_allow_html=True),
+                st.markdown("""
+    <span style='font-size: 18px; font-weight: bold; color: #ffffff;'>Which of the following food combinations do you most often go for when eating out?</span><br>
+    <span style='color: #ffffff;'>Pick the pair that best matches your usual main course preference.</span>
+""", unsafe_allow_html=True),
+
                 st.multiselect("", ["None of the below", "Burgers and Pizza", "Pizza and Wings", "Noodles and Ramen", "Sushi and Ramen",
                 "Soup and Sandwiches", "Chicken and Salad", "Tacos and Chips", "Fish and Chips",
                 "Cheesesteaks and Chips", "Poke and Salad", "Soup and Noodles"], placeholder="Choose options")
             ),
 
             'extra_treat': (
-                st.markdown("<span style='font-size: 18px; font-weight: bold;'>What's your go-to extra treat when eating out?</span>\n(Whether it's a refreshing smoothie or a sweet dessert, pick the combo you just can't skip!)", unsafe_allow_html=True),
+                st.markdown("""
+    <span style='font-size: 18px; font-weight: bold; color: #ffffff;'>What's your go-to extra treat when eating out?</span><br>
+    <span style='color: #ffffff;'>Whether it's a refreshing smoothie or a sweet dessert, pick the combo you just can't skip!</span>
+""", unsafe_allow_html=True),
                 st.multiselect("", ["None of the below", "Bagels and Juice", "Smoothies and Bagels", "Yogurt and Smoothies", "Desserts"], placeholder="Choose options")
             ),
 
             'drink_choice': (
-                st.markdown("<span style='font-size: 18px; font-weight: bold;'>What's your usual drink of choice when dining out?</span>\n(Pick the one that best matches your vibe—whether you're keeping it chill or toasting the night!)", unsafe_allow_html=True),
+               st.markdown("""
+    <span style='font-size: 18px; font-weight: bold; color: #ffffff;'>What's your usual drink of choice when dining out?</span><br>
+    <span style='color: #ffffff;'>Pick the one that best matches your vibe—whether you're keeping it chill or toasting the night!</span>
+""", unsafe_allow_html=True),
                 st.multiselect("", ["None of the below", "Cocktail", "Beer", "Juice", "Wine"], placeholder="Choose options")
             ),
 
             'comfort_sip': (
-                st.markdown("<span style='font-size: 18px; font-weight: bold;'>When it's time for a quick break, what's your sip of comfort?</span>\n(Are you team coffee or team tea?)", unsafe_allow_html=True),
-                st.multiselect("", ["None of the below", "Coffee", "Tea"], placeholder="Choose options")
+st.markdown("""
+    <span style='font-size: 18px; font-weight: bold; color: #ffffff;'>When it's time for a quick break, what's your sip of comfort?</span><br>
+    <span style='color: #ffffff;'>Are you team coffee or team tea?</span>
+""", unsafe_allow_html=True),
+
+                    st.multiselect("", ["None of the below", "Coffee", "Tea"], placeholder="Choose options")
             ),
 
             'dietary_preference': (
-                st.markdown("<span style='font-size: 18px; font-weight: bold;'>What's your dietary preference when eating out?</span>\n(Do you go for vegan, vegetarian, non-vegetarian or no preference?)", unsafe_allow_html=True),
+            st.markdown("""
+    <span style='font-size: 18px; font-weight: bold; color: #ffffff;'>What's your dietary preference when eating out?</span><br>
+    <span style='color: #ffffff;'>Do you go for vegan, vegetarian, non-vegetarian or no preference?</span>
+""", unsafe_allow_html=True) ,
                 st.selectbox("", ["Vegan", "Vegetarian", "Non-Vegetarian", "No Preference"], placeholder="Choose an option")
             )
         }
