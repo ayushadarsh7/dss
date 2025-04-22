@@ -656,82 +656,50 @@ st.markdown("""
                     
                     if not user_reviewed:
                         st.markdown("<h2 style='color: #34495e;'>📝 Feedback Survey</h2>", unsafe_allow_html=True)
-                        st.markdown('<div style="color: #ffffff;font-weight: bold; margin-bottom: 20px;">Please rate your experience with the recommendations (1 = Strongly Disagree, 5 = Strongly Agree)</div>', unsafe_allow_html=True)
+                        st.markdown('<div style="color: #666; margin-bottom: 20px;">Please rate your experience with the recommendations (1 = Strongly Disagree, 5 = Strongly Agree)</div>', unsafe_allow_html=True)
                         
-                        survey_responses = {}
-
-                        # Matched Interests Slider
-                        st.markdown('<h3 style="color: #ffffff; font-weight: bold;">The items recommended to group matched my interests</h3>', unsafe_allow_html=True)
-                        survey_responses['matched_interests'] = st.slider(
-                            " ",
-                            1, 5, 3,
-                            help="How well did the recommendations match your personal preferences?",
-                            key="matched_interests_slider"
-                         )
-
-                         # Discovered New Items Slider
-                         st.markdown('<h3 style="color: #ffffff; font-weight: bold;">The recommender system helped me discover new items</h3>', unsafe_allow_html=True)
-                         survey_responses['discovered_new_items'] = st.slider(
-                         " ",
-                         1, 5, 3,
-                         help="Did you find any new or interesting options?",
-                         key="discovered_new_items_slider"
-                         )
-
-                         # Diverse Recommendations Slider
-                         st.markdown('<h3 style="color: #ffffff; font-weight: bold;">The items recommended to group are diverse</h3>', unsafe_allow_html=True)
-                         survey_responses['diverse_recommendations'] = st.slider(
-                         " ",
-                          1, 5, 3,
-                          help="Were the recommendations varied enough?",
-                          key="diverse_recommendations_slider"
-                           )
-
-                           # Easy to Find Slider
-                          st.markdown('<h3 style="color: #ffffff; font-weight: bold;">I easily found the recommended items</h3>', unsafe_allow_html=True)
-                          survey_responses['easy_to_find'] = st.slider(
-                           " ",
-                          1, 5, 3,
-                          help="How easy was it to understand the recommendations?",
-                          key="easy_to_find_slider"
-                          )
-
-                        # Ideal Item Found Slider
-                         st.markdown('<h3 style="color: #ffffff; font-weight: bold;">The recommender helped me find the ideal item</h3>', unsafe_allow_html=True)
-                         survey_responses['ideal_item_found'] = st.slider(
-                         " ",
-                         1, 5, 3,
-                         help="Did you find something you would really like to try?",
-                         key="ideal_item_found_slider"
-                          )
-
-                         # Overall Satisfaction Slider
-                         st.markdown('<h3 style="color: #ffffff; font-weight: bold;">Overall, I am satisfied with the recommender</h3>', unsafe_allow_html=True)
-                         survey_responses['overall_satisfaction'] = st.slider(
-                         " ",
-                          1, 5, 3,
-                               help="How satisfied are you with the recommendation process?",
-                             key="overall_satisfaction_slider"
-                             )
-
-                         # Confidence in Decision Slider
-                         st.markdown('<h3 style="color: #ffffff; font-weight: bold;">The recommender made me more confident about my selection/decision when dining out in a group</h3>', unsafe_allow_html=True)
-                         survey_responses['confidence_in_decision'] = st.slider(
-                             " ",
-                           1, 5, 3,
-                          help="Did the recommendations help you feel more confident about group dining choices?",
-                          key="confidence_in_decision_slider"
+                        survey_responses = {
+                            'matched_interests': st.slider(
+                                "The items recommended to group matched my interests",
+                                1, 5, 3,
+                                help="How well did the recommendations match your personal preferences?"
+                            ),
+                            'discovered_new_items': st.slider(
+                                "The recommender system helped me discover new items",
+                                1, 5, 3,
+                                help="Did you find any new or interesting options?"
+                            ),
+                            'diverse_recommendations': st.slider(
+                                "The items recommended to group are diverse",
+                                1, 5, 3,
+                                help="Were the recommendations varied enough?"
+                            ),
+                            'easy_to_find': st.slider(
+                                "I easily found the recommended items",
+                                1, 5, 3,
+                                help="How easy was it to understand the recommendations?"
+                            ),
+                            'ideal_item_found': st.slider(
+                                "The recommender helped me find the ideal item",
+                                1, 5, 3,
+                                help="Did you find something you would really like to try?"
+                            ),
+                            'overall_satisfaction': st.slider(
+                                "Overall, I am satisfied with the recommender",
+                                1, 5, 3,
+                                help="How satisfied are you with the recommendation process?"
+                            ), 
+                            'confidence_in_decision': st.slider(
+                                "The recommender made me more confident about my selection/decision when dining out in a group",
+                                1, 5, 3,
+                                help="Did the recommendations help you feel more confident about group dining choices?"
+                            ),
+                            'would_buy_recommendations': st.slider(
+                                "I would try the items recommended, given the opportunity when hanging out in a group",
+                                1, 5, 3,
+                                help="How likely are you to try these recommendations?"
                             )
-
-                         # Would Buy Recommendations Slider
-                         st.markdown('<h3 style="color: #ffffff; font-weight: bold;">I would try the items recommended, given the opportunity when hanging out in a group</h3>', unsafe_allow_html=True)
-                         survey_responses['would_buy_recommendations'] = st.slider(
-                              " ",
-                               1, 5, 3,
-                           help="How likely are you to try these recommendations?",
-                        key="would_buy_recommendations_slider"
-                          )
-
+                        }
                         
                         if st.button("Submit Feedback", key="submit_feedback"):
                             if validate_survey_responses(survey_responses):
@@ -769,4 +737,3 @@ st.markdown("""
                 Waiting for all group members to submit their preferences...
             </div>
         """, unsafe_allow_html=True)
-
