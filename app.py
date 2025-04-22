@@ -397,8 +397,8 @@ else:
         
         with st.container():
             st.markdown("""
-                <div style='background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
-                    <p style='color: #000000;'>Please fill in your dining preferences to help us recommend the best options for your group.</p>
+                <div style='background-color: #000000; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
+                    <p style='color: #ffffff;'>Please fill in your dining preferences to help us recommend the best options for your group.</p>
                 </div>
             """, unsafe_allow_html=True)
 
