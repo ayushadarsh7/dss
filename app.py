@@ -396,11 +396,12 @@ else:
         st.markdown("<h2 style='color: #34495e;'>📝 Dining Preferences Questionnaire</h2>", unsafe_allow_html=True)
         
         with st.container():
-            st.markdown("""
+           st.markdown("""
                 <div style='background-color: #ffffff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
-                    <p style='color: #000000;'>Please fill in your dining preferences to help us recommend the best options for your group.</p>
+                    <p style='color: #000000; font-size: 20px; font-weight: bold;'>Please fill in your dining preferences to help us recommend the best options for your group.</p>
                 </div>
             """, unsafe_allow_html=True)
+
 
         response_data = {
             'preferred_cuisine': (
