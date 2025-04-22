@@ -554,7 +554,7 @@ st.markdown("""
                 """, unsafe_allow_html=True)
             
             st.markdown("<h3 style='color: #2c3e50;'>Please rate each recommendation (1-5)</h3>", unsafe_allow_html=True)
-            st.markdown('<div style="color: #666; margin-bottom: 20px;">1 = Not interested, 5 = Very interested</div>', unsafe_allow_html=True)
+            st.markdown('<div style="color: #ffffff; margin-bottom: 20px;">1 = Not interested, 5 = Very interested</div>', unsafe_allow_html=True)
             
             # Add refresh button for ratings
             if st.button("🔄 Refresh Ratings", key="refresh_ratings"):
@@ -563,7 +563,8 @@ st.markdown("""
             # Collect all ratings first
             ratings = {}
             for category, score in recommendations.items():
-                ratings[category] = st.slider(f"Rate {category}", 1, 5, 3)
+                st.markdown(f"<h3 style='color: #ffffff;font-weight: bold;'>Rate {category}</h3>", unsafe_allow_html=True)
+                ratings[category] = st.slider(f"Rate {category}", 1, 5, 3) 
             
             # Submit all ratings at once
             if st.button("Submit All Ratings", key="submit_ratings"):
