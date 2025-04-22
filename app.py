@@ -17,7 +17,7 @@ st.set_page_config(
 st.markdown("""
     <style>
     .main {
-        background-color: #f5f5f5;
+        background-color: #000000;
     }
     .stButton>button {
         background-color: #4CAF50;
@@ -397,8 +397,8 @@ else:
         
         with st.container():
             st.markdown("""
-                <div style='background-color: #34495e; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
-                    <p style='color: #ffffff;'>Please fill in your dining preferences to help us recommend the best options for your group.</p>
+                <div style='background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
+                    <p style='color: #000000;'>Please fill in your dining preferences to help us recommend the best options for your group.</p>
                 </div>
             """, unsafe_allow_html=True)
 
