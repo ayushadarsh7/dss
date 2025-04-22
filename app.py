@@ -50,7 +50,7 @@ st.markdown("""
         margin-bottom: 30px;
     }
     .stMarkdown h2 {
-        color: ##090979;
+        color: #ffffff;
         border-bottom: 2px solid #4CAF50;
         padding-bottom: 10px;
     }
