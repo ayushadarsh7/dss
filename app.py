@@ -686,7 +686,7 @@ st.markdown("""
                                 "Overall, I am satisfied with the recommender",
                                 1, 5, 3,
                                 help="How satisfied are you with the recommendation process?"
-                            ),
+                            ), 
                             'confidence_in_decision': st.slider(
                                 "The recommender made me more confident about my selection/decision when dining out in a group",
                                 1, 5, 3,
