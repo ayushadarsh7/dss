@@ -405,7 +405,10 @@ else:
 
         response_data = {
             'preferred_cuisine': (
-                st.markdown("<span style='font-size: 18px; font-weight: bold;color: #ffffff;'>Which type of cuisine do you usually prefer when eating out?</span>\n(Please select the one that best matches your taste.)", unsafe_allow_html=True),
+                st.markdown("""
+    <span style='font-size: 18px; font-weight: bold; color: #ffffff;'>Which type of cuisine do you usually prefer when eating out?</span><br>
+    <span style='color: #ffffff;'>Please select the one that best matches your taste.</span>
+""", unsafe_allow_html=True)
                 st.multiselect("", ["None of the below", "Mexican", "African", "Latin", "Italian", "Soul", "Tex", "Mex", "Japanese", "Thai", "Asian", 
                 "Chinese", "Southern", "Cajun", "Creole", "Pakistani", "Indian", "Korean", "Vietnamese", 
                 "Greek", "Mediterranean", "Hawaiian", "Caribbean", "Cantonese", "Szechuan", "Eastern", 
