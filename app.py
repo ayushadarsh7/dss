@@ -45,7 +45,7 @@ st.markdown("""
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .stMarkdown h1 {
-        color: #FF0000;
+        color: #4d6b80;
         text-align: center;
         margin-bottom: 30px;
     }
