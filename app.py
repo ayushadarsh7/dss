@@ -563,11 +563,10 @@ st.markdown("""
             # Collect all ratings first
             ratings = {}
             for category, score in recommendations.items():
-                ratings[category] = st.slider(
-                         f"<h3 style='color: #ffffff; font-weight: bold;'>Rate {category}</h3>", 
-                               1, 5, 3, 
-                       help="Select a rating" )
-            
+                st.markdown(f"<h3 style='color: #ffffff;font-weight: bold;'>Rate {category}</h3>", unsafe_allow_html=True)
+
+                ratings[category] = st.slider("", 1, 5, 3)
+                
             # Submit all ratings at once
             if st.button("Submit All Ratings", key="submit_ratings"):
                 all_rated = True
