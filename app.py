@@ -398,14 +398,14 @@ else:
         with st.container():
            st.markdown("""
                 <div style='background-color: #ffffff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
-                    <p style='color: #000000; font-size: 20px; font-weight: bold;'>Please fill in your dining preferences to help us recommend the best options for your group.</p>
+                    <p style='color: #000000; font-size: 24px; font-weight: bold;'>Please fill in your dining preferences to help us recommend the best options for your group.</p>
                 </div>
             """, unsafe_allow_html=True)
 
 
         response_data = {
             'preferred_cuisine': (
-                st.markdown("<span style='font-size: 18px; font-weight: bold;'>Which type of cuisine do you usually prefer when eating out?</span>\n(Please select the one that best matches your taste.)", unsafe_allow_html=True),
+                st.markdown("<span style='font-size: 18px; font-weight: bold;color: #ffffff;'>Which type of cuisine do you usually prefer when eating out?</span>\n(Please select the one that best matches your taste.)", unsafe_allow_html=True),
                 st.multiselect("", ["None of the below", "Mexican", "African", "Latin", "Italian", "Soul", "Tex", "Mex", "Japanese", "Thai", "Asian", 
                 "Chinese", "Southern", "Cajun", "Creole", "Pakistani", "Indian", "Korean", "Vietnamese", 
                 "Greek", "Mediterranean", "Hawaiian", "Caribbean", "Cantonese", "Szechuan", "Eastern", 
